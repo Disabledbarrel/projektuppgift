@@ -1,0 +1,98 @@
+// Variabler
+$bg-color: #3a4750;
+$header-color: #008080;
+$light-color: #eeeeee;
+$dark-color: #303841;
+
+$main-font: "Cutive Mono", Courier, monospace;
+$head-font: "Comfortaa", cursive;
+
+$container: 1300px;
+
+// Functions
+@function setTxtColor($bg-color) {
+  @if (lightness($bg-color) > 50) {
+    @return $dark-color;
+  } @else {
+    @return $light-color;
+  }
+}
+
+/* Nollställer marginaler och paddings*/
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Generell styling*/
+body {
+  height: 100%;
+  font-family: $main-font;
+  background: $bg-color;
+  color: $light-color;
+  line-height: 1.5;
+}
+
+// Rubriker
+h1,
+h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: $head-font;
+
+  &.lg-heading {
+    font-size: 6rem;
+  }
+}
+
+// Länkar
+a {
+  text-decoration: none;
+  color: setTxtColor($bg-color);
+}
+
+// Listor
+ul {
+  list-style: none;
+}
+
+// Bilder
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+// Mixins Media Queries
+@mixin phone {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
+
+// Extensions
+%section-styling {
+  padding: 0 10px 20px 10px;
+  h2 {
+    font-size: 2em;
+  }
+}
+
+%message-shared {
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: center;
+}

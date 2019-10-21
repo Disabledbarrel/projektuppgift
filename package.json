@@ -1,0 +1,34 @@
+{
+  "name": "moment2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Disabledbarrel/moment2_nodejs_gulp.git"
+  },
+  "author": "Elin Larsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Disabledbarrel/moment2_nodejs_gulp/issues"
+  },
+  "homepage": "https://github.com/Disabledbarrel/moment2_nodejs_gulp#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-rev-delete-original": "^0.2.3",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "browsersync": "0.0.1-security",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
