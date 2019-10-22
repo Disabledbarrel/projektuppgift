@@ -2,7 +2,7 @@
 Elin Larsson HT-19
 */
 
-document.getElementById('addCourse').addEventListener('submit', addCourse); // För att läsa in till databas
+/* document.getElementById('addCourse').addEventListener('submit', addCourse); // För att läsa in till databas
 window.addEventListener("load", getText); // Laddar in kurser från databas
 
 function getText() {
@@ -77,4 +77,4 @@ function addCourse(e) { // Lägga till kurser med POST
  
     }
 }
-
+*/
