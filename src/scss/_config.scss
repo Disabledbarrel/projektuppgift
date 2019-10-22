@@ -1,0 +1,77 @@
+// Variabler
+$bg-color: #3a4750;
+$header-color: #00adb5;
+$light-color: #eeeeee;
+$dark-color: #303841;
+
+$main-font: "Cutive Mono", Courier, monospace;
+$head-font: "Comfortaa", cursive;
+
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.8;
+
+// Functions
+@function setTxtColor($bg-color) {
+  @if (lightness($bg-color) > 50) {
+    @return $dark-color;
+  } @else {
+    @return $light-color;
+  }
+}
+
+// Mixins Media Queries
+@mixin phone {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 1300px) {
+    @content;
+  }
+}
+
+// Mixins efekter
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba($bg-color, $background-opacity);
+      }
+    }
+  }
+}
+
+// Extensions
+%section-styling {
+  padding: 0 10px 20px 10px;
+  h2 {
+    font-size: 2em;
+  }
+}
+
+%message-shared {
+  font-size: 1.2em;
+  line-height: 1.5;
+  text-align: center;
+}
