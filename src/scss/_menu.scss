@@ -35,3 +35,62 @@
     }
   }
 }
+
+// Täckande meny
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-branding,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-nav {
+    margin: 0;
+    padding: 0;
+    opacity: 0.9;
+    background: darken($bg-color, 5);
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+
+    &.show {
+      // Glider in från topp
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // Branding sida av meny
+  &-branding {
+    background: $bg-color;
+    transform: translate3d(0, 100%, 0);
+    opacity: 1;
+    @include easeOut;
+
+    &.show {
+      // Glider in från botten
+      transform: translate3d(0, 0, 0);
+    }
+
+    .portrait {
+      width: 250px;
+      height: 250px;
+      background: url(../img/elin.jpg);
+      border-radius: 50%;
+      border: solid 3px $header-color;
+    }
+  }
+}
