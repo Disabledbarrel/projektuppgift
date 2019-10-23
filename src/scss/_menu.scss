@@ -10,7 +10,7 @@
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
-    background: $light-color;
+    background: setTxtColor($bg-color);
     @include easeOut;
   }
 

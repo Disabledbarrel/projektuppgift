@@ -13,7 +13,7 @@ body {
   height: 100%;
   font-family: $main-font;
   background: $bg-color;
-  color: $light-color;
+  color: setTxtColor($bg-color);
   line-height: 1.5;
 }
 

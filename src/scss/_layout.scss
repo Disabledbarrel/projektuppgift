@@ -1,0 +1,65 @@
+// Widescreens
+@include desktopXl {
+}
+
+// Dsktops och Laptops
+@include desktop {
+}
+
+// Läsplattor
+@include tablet {
+  main {
+    align-items: center;
+    text-align: center;
+
+    .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+  }
+
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-nav {
+    height: 65vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+    opacity: 1;
+    padding-bottom: 50px;
+  }
+
+  .menu-branding {
+    height: 35vh;
+    transform: translate3d(100%, 0, 0);
+    padding: 40px;
+
+    .portrait {
+      background: url("../img/elin_small.jpg");
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
+
+// Smartphones
+@include phone {
+  main#home h1 {
+    margin-top: 10vh;
+    font-size: 3em;
+  }
+  main {
+    .sm-heading {
+      font-size: 1.3em;
+      padding: 10px;
+    }
+  }
+}
