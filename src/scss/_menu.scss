@@ -93,4 +93,24 @@
       border: solid 3px $header-color;
     }
   }
+
+  .nav-item {
+    &.current > a {
+      color: $header-color;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-family: $head-font;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    @include easeOut;
+    &:hover {
+      color: $header-color;
+    }
+  }
 }
