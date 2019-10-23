@@ -2,3 +2,37 @@
 .text-secondary {
   color: $header-color;
 }
+
+// Om mig
+main#about {
+  h1 {
+    padding-bottom: 20px;
+  }
+}
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  border: solid 3px $header-color;
+}
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem;
+}
+.job1 {
+  grid-area: job1;
+}
+.job2 {
+  grid-area: job2;
+}
+.job3 {
+  grid-area: job3;
+}
