@@ -17,6 +17,9 @@
       margin-bottom: 1rem;
     }
   }
+  main#about {
+    padding: 1rem;
+  }
 
   ul.menu-nav,
   div.menu-branding {
@@ -48,6 +51,18 @@
       height: 150px;
     }
   }
+
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "education-header"
+      "job1"
+      "job2"
+      "job3";
+
+    grid-template-columns: 1fr;
+  }
 }
 
 // Smartphones
@@ -61,5 +76,9 @@
       font-size: 1.3em;
       padding: 10px;
     }
+  }
+
+  main#about h1 {
+    font-size: 3rem;
   }
 }

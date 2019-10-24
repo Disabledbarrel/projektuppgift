@@ -9,30 +9,63 @@ main#about {
     padding-bottom: 20px;
   }
 }
+
 .about-info {
   display: grid;
   grid-gap: 30px;
   grid-template-areas:
     "bioimage bio bio"
+    "education-header education-header education-header"
     "job1 job2 job3";
   grid-template-columns: 1fr 1fr 1fr;
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: solid 3px $header-color;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .education-header {
+    grid-area: education-header;
+  }
+
+  .job1 {
+    grid-area: job1;
+  }
+
+  .job2 {
+    grid-area: job2;
+  }
+
+  .job3 {
+    grid-area: job3;
+  }
+
+  .bio-text {
+    background: $dark-color;
+    padding: 0.5rem;
+  }
+
+  .job1,
+  .job2,
+  .job3 {
+    background: $dark-color;
+    padding: 0.5rem;
+    border-bottom: 3px solid $header-color;
+  }
 }
-.bio-image {
-  grid-area: bioimage;
-  margin: auto;
-  border-radius: 50%;
-  border: solid 3px $header-color;
-}
-.bio {
-  grid-area: bio;
-  font-size: 1.5rem;
-}
-.job1 {
-  grid-area: job1;
-}
-.job2 {
-  grid-area: job2;
-}
-.job3 {
-  grid-area: job3;
+
+// Footer
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($bg-color, 10);
+  color: setTxtColor($bg-color);
+  height: 50px;
 }
