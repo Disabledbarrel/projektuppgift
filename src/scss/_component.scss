@@ -58,6 +58,49 @@ main#about {
   }
 }
 
+// Projekt
+#projects {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  font-size: 1.2rem;
+
+  .item {
+    background: $dark-color;
+
+    .item-text {
+      padding: 20px;
+    }
+
+    h3 {
+      font-family: $head-font;
+      color: $header-color;
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  img {
+    width: 100%;
+    border: 3px solid $light-color;
+    margin-bottom: 10px;
+
+    &:hover {
+      opacity: 0.5;
+      border-color: $header-color;
+      @include easeOut;
+    }
+  }
+
+  .project_link {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 // Footer
 #main-footer {
   text-align: center;

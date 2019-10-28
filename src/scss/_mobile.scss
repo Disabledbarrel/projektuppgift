@@ -60,6 +60,12 @@
 
     grid-template-columns: 1fr;
   }
+
+  #projects {
+    display: grid;
+    grid-gap: 0.7rem;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 // Smartphones
@@ -77,10 +83,21 @@
   main#about h1 {
     font-size: 3rem;
   }
+  main#work {
+    padding: 0;
+
+    h1 {
+      font-size: 3.5rem;
+      padding: 20px;
+    }
+  }
   #output {
     display: block;
     .job {
       margin-bottom: 20px;
     }
+  }
+  #projects {
+    display: block;
   }
 }

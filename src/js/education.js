@@ -5,7 +5,7 @@ window.addEventListener("load", getEducation); // Laddar in utbildning från dat
 
 function getEducation() {
   fetch(
-    "http://localhost/projekt_webbutvecklingIII/projekt_API/api/education/read.php"
+    "http://studenter.miun.se/~ella1800/dt173g/projekt_api/api/api/education/read.php"
   ) // Hämtar med get
     .then(msg => msg.json())
     .then(msg => {
