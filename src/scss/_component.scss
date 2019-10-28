@@ -15,8 +15,7 @@ main#about {
   grid-gap: 30px;
   grid-template-areas:
     "bioimage bio bio"
-    "education-header education-header education-header"
-    "job1 job2 job3";
+    "education-header education-header education-header";
   grid-template-columns: 1fr 1fr 1fr;
 
   .bio-image {
@@ -33,31 +32,29 @@ main#about {
 
   .education-header {
     grid-area: education-header;
-  }
-
-  .job1 {
-    grid-area: job1;
-  }
-
-  .job2 {
-    grid-area: job2;
-  }
-
-  .job3 {
-    grid-area: job3;
+    color: $header-color;
+    font-size: 1.5rem;
+    font-family: $head-font;
   }
 
   .bio-text {
     background: $dark-color;
     padding: 0.5rem;
   }
+}
 
-  .job1,
-  .job2,
-  .job3 {
+#output {
+  font-size: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  .job {
     background: $dark-color;
     padding: 0.5rem;
     border-bottom: 3px solid $header-color;
+    h4 {
+      font-family: $head-font;
+    }
   }
 }
 
