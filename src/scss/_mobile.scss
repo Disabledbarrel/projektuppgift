@@ -2,7 +2,7 @@
 @include desktopXl {
 }
 
-// Dsktops och Laptops
+// Desktops och Laptops
 @include desktop {
 }
 
@@ -66,22 +66,72 @@
     grid-gap: 0.7rem;
     grid-template-columns: 1fr 1fr;
   }
+
+  #output,
+  #output2 {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 // Smartphones
 @include phone {
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .menu-nav {
+    height: 65vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px;
+    opacity: 1;
+    padding-bottom: 50px;
+  }
+
+  .menu-branding {
+    height: 35vh;
+    transform: translate3d(100%, 0, 0);
+    padding: 40px;
+
+    .portrait {
+      background: url("../img/elin_small.jpg");
+      width: 150px;
+      height: 150px;
+    }
+  }
+
   main#home h1 {
     margin-top: 10vh;
     font-size: 3em;
   }
   main {
+    align-items: center;
+    text-align: center;
+
     .sm-heading {
       font-size: 1.3em;
       padding: 10px;
     }
   }
+  main#about {
+    padding: 1rem;
+  }
   main#about h1 {
     font-size: 3rem;
+  }
+  .about-info {
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "education-header";
+
+    grid-template-columns: 1fr;
   }
   main#work {
     padding: 0;
