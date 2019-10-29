@@ -57,6 +57,9 @@ main#about {
     }
   }
 }
+#output2 {
+  @extend #output;
+}
 
 // Projekt
 #projects {
