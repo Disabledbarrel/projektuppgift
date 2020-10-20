@@ -83,6 +83,12 @@
       line-height: 1;
       margin-bottom: 1rem;
     }
+    .sm-heading {
+      font-size: 1.1rem;
+    }
+    #main-heading {
+      font-size: 1.3rem;
+    }
   }
   main#about {
     padding: 1rem;
@@ -108,7 +114,7 @@
     transform: translate3d(-100%, 0, 0);
     font-size: 24px;
     opacity: 1;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
 
   .menu-branding {
@@ -130,12 +136,15 @@
       "education-header";
 
     grid-template-columns: 1fr;
+    .bio-text {
+      font-size: 1.2rem;
+    }
   }
   main#work {
     padding: 0;
 
     h1 {
-      font-size: 3.5rem;
+      font-size: 3.2rem;
       padding: 20px;
     }
   }
